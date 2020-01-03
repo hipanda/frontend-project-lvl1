@@ -1,0 +1,8 @@
+extends: airbnb-base
+plugins:
+  - babel
+rules:
+  no-console: 0
+  import/extensions: ["warn", "ignorePackages"]
+env:
+  node: true

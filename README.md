@@ -6,3 +6,6 @@
 
 ## Even numbers guessing
 [![asciicast](https://asciinema.org/a/0XcGvH46BuHkeBHXHOy9XvJ94.png)](https://asciinema.org/a/0XcGvH46BuHkeBHXHOy9XvJ94)
+
+## Caclulator
+[![asciicast](https://asciinema.org/a/1cCtGTK9IwC3luhqQlA6JWaZs.png)](https://asciinema.org/a/1cCtGTK9IwC3luhqQlA6JWaZs)

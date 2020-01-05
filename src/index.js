@@ -1,20 +1,26 @@
 
 import readlineSync from 'readline-sync';
 
-const askName = () => {
-  const name = readlineSync.question('What is your name? ');
+// number of correct answers to win. common for all games
+const ANSWERS_TO_WIN = 3;
+
+// meet a player
+export const greetings = (gameIntroStr = '') => {
+  console.log('\nWelcome to the Brain Games!');
+  if (gameIntroStr.length > 0) {
+    console.log(gameIntroStr);
+  }
+};
+
+// ask player's name and return it
+export const askName = () => {
+  const name = readlineSync.question('What\'s is your name? ');
   console.log(`Hello, ${name}!\n`);
   return name;
 };
 
-export default askName;
-
-export const askEvenNumber = () => {
-  const number = Math.round(100 * Math.random());
-  const isEven = number % 2 === 0;
-  const answer = readlineSync.question(`Question: ${number}\nYour answer: `);
-
-  const correctAnswer = isEven ? 'yes' : 'no';
+// common answer check
+export const answerChecker = (answer, correctAnswer) => {
   const isCorrect = answer === correctAnswer;
 
   if (isCorrect) {
@@ -24,4 +30,18 @@ export const askEvenNumber = () => {
   }
 
   return isCorrect;
+};
+
+// common question iterator
+export const quizPlayer = (playerName, questionFunc, correctAnswers = 0) => {
+  if (correctAnswers === ANSWERS_TO_WIN) {
+    return console.log(`Congratulations, ${playerName}!\n`);
+  }
+  const isCorrect = questionFunc();
+  if (isCorrect) {
+    return quizPlayer(playerName, questionFunc, correctAnswers + 1);
+  }
+
+  console.log(`Let's try again, ${playerName}!\n`);
+  return quizPlayer(playerName, questionFunc, correctAnswers);
 };

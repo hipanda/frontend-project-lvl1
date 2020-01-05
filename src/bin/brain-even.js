@@ -1,26 +1,24 @@
 #!/usr/bin/env node
 
-import askName, { askEvenNumber } from '../index.js';
+import readlineSync from 'readline-sync';
+import {
+  greetings,
+  askName,
+  answerChecker,
+  quizPlayer,
+} from '../index.js';
 
-console.log('Welcome to the Brain Games!');
-console.log('Answer "yes" if the number is even, otherwise answer "no".\n');
-
-const name = askName();
-
-const NEEDED_ANSWERS = 3;
-
-const iterQuestion = (correctAnswers) => {
-  if (correctAnswers === NEEDED_ANSWERS) {
-    return console.log(`Congratulations, ${name}!\n`);
-  }
-
-  const isCorrect = askEvenNumber();
-  if (isCorrect) {
-    return iterQuestion(correctAnswers + 1);
-  }
-
-  console.log(`Let's try again, ${name}!\n`);
-  return iterQuestion(correctAnswers);
+// task for even-game
+const askEvenNumber = () => {
+  const number = Math.round(100 * Math.random());
+  const isEven = number % 2 === 0;
+  const answer = readlineSync.question(`Question: ${number}\nYour answer: `);
+  const correctAnswer = isEven ? 'yes' : 'no';
+  return answerChecker(answer, correctAnswer);
 };
 
-iterQuestion(0);
+// game starts
+greetings('Answer "yes" if the number is even, otherwise answer "no".\n');
+const name = askName();
+// start asking questions till player wins
+quizPlayer(name, askEvenNumber);

@@ -6,11 +6,12 @@ import {
   askName,
   answerChecker,
   quizPlayer,
+  getRandomPositive,
 } from '../index.js';
 
 // task for even-game
 const askEvenNumber = () => {
-  const number = Math.round(100 * Math.random());
+  const number = getRandomPositive(100);
   const isEven = number % 2 === 0;
   const answer = readlineSync.question(`Question: ${number}\nYour answer: `);
   const correctAnswer = isEven ? 'yes' : 'no';

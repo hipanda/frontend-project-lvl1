@@ -45,3 +45,5 @@ export const quizPlayer = (playerName, questionFunc, correctAnswers = 0) => {
   console.log(`Let's try again, ${playerName}!\n`);
   return quizPlayer(playerName, questionFunc, correctAnswers);
 };
+
+export const getRandomPositive = (max) => Math.round(Math.random() * (max - 1)) + 1;

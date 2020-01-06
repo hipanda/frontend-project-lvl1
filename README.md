@@ -9,3 +9,6 @@
 
 ## Caclulator
 [![asciicast](https://asciinema.org/a/1cCtGTK9IwC3luhqQlA6JWaZs.png)](https://asciinema.org/a/1cCtGTK9IwC3luhqQlA6JWaZs)
+
+## Find greatest common divisior
+[![asciicast](https://asciinema.org/a/3UIEjvCI9R69cVe8IGuSU6VZb.png)](https://asciinema.org/a/3UIEjvCI9R69cVe8IGuSU6VZb)

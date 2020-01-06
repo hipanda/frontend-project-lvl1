@@ -6,6 +6,7 @@ import {
   askName,
   answerChecker,
   quizPlayer,
+  getRandomPositive,
 } from '../index.js';
 
 // calc functions
@@ -26,14 +27,14 @@ const operatorFunc = (op) => {
 };
 
 const askCalc = () => {
-  const num1 = Math.round(Math.random() * 10);
-  const num2 = Math.round(Math.random() * 10);
+  const num1 = getRandomPositive(10);
+  const num2 = getRandomPositive(10);
   const opNum = Math.round(Math.random() * (operators.length - 1));
   const op = operators[opNum];
   const opFunc = operatorFunc(op);
 
   const correctAnswer = String(opFunc(num1, num2));
-  const answer = String(readlineSync.question(`Question: ${num1} ${op} ${num2}\nYour answer: `));
+  const answer = readlineSync.question(`Question: ${num1} ${op} ${num2}\nYour answer: `);
   return answerChecker(answer, correctAnswer);
 };
 

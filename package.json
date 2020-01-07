@@ -25,9 +25,10 @@
     "url": "git+https://github.com/hipanda/frontend-project-lvl1.git"
   },
   "keywords": [
-    "noob"
+    "noob-project",
+    "text-based-game"
   ],
-  "author": "Vasilit Pugovkin",
+  "author": "Vasiliy Pugovkin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hipanda/frontend-project-lvl1/issues"

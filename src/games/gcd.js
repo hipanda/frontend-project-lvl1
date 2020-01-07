@@ -5,6 +5,8 @@ import {
   answerChecker,
 } from '../index.js';
 
+const maxNum = 100;
+
 const gcd = (num1, num2) => {
   const larger = num1 > num2 ? num1 : num2;
   const smaller = num1 > num2 ? num2 : num1;
@@ -18,8 +20,8 @@ const gcd = (num1, num2) => {
 
 // askGCD
 export default () => {
-  const num1 = getRandomPositive(100);
-  const num2 = getRandomPositive(100);
+  const num1 = getRandomPositive(maxNum);
+  const num2 = getRandomPositive(maxNum);
 
   const correctAnswer = String(gcd(num1, num2));
   const answer = askQuestion(`${num1} ${num2}`);

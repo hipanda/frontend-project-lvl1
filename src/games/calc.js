@@ -6,6 +6,7 @@ import {
 } from '../index.js';
 
 const operators = ['+', '-', '*'];
+const maxNum = 10;
 
 const operatorFunc = (op) => {
   switch (op) {
@@ -24,8 +25,8 @@ const operatorFunc = (op) => {
 
 // askCalc
 export default () => {
-  const num1 = getRandomPositive(10);
-  const num2 = getRandomPositive(10);
+  const num1 = getRandomPositive(maxNum);
+  const num2 = getRandomPositive(maxNum);
   const opNum = Math.round(Math.random() * (operators.length - 1));
   const op = operators[opNum];
   const opFunc = operatorFunc(op);

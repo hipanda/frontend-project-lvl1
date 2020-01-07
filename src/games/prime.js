@@ -5,6 +5,7 @@ import {
   answerChecker,
 } from '../index.js';
 
+const maxNum = 100;
 
 const isPrime = (num) => {
   if (num > 2 && num % 2 === 0) {
@@ -28,7 +29,7 @@ const isPrime = (num) => {
 
 // askPrimeNumber
 export default () => {
-  const number = getRandomPositive(100) + 1; // starting from 2
+  const number = getRandomPositive(maxNum) + 1; // starting from 2
 
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   const answer = askQuestion(number);

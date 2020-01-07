@@ -2,7 +2,7 @@
 import readlineSync from 'readline-sync';
 
 // number of correct answers to win. common for all games
-const ANSWERS_TO_WIN = 3;
+const answersToWin = 3;
 
 // meet a player
 export const greetings = (gameIntroStr = '') => {
@@ -34,7 +34,7 @@ export const answerChecker = (answer, correctAnswer) => {
 
 // common question iterator
 export const quizPlayer = (playerName, questionFunc, correctAnswers = 0) => {
-  if (correctAnswers === ANSWERS_TO_WIN) {
+  if (correctAnswers === answersToWin) {
     return console.log(`Congratulations, ${playerName}!\n`);
   }
   const isCorrect = questionFunc();

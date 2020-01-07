@@ -5,9 +5,11 @@ import {
   answerChecker,
 } from '../index.js';
 
+const maxNum = 100;
+
 // askEvenNumber
 export default () => {
-  const number = getRandomPositive(100);
+  const number = getRandomPositive(maxNum);
   const isEven = number % 2 === 0;
   const answer = askQuestion(number);
   const correctAnswer = isEven ? 'yes' : 'no';

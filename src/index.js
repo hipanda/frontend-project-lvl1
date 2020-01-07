@@ -46,4 +46,6 @@ export const quizPlayer = (playerName, questionFunc, correctAnswers = 0) => {
   return quizPlayer(playerName, questionFunc, correctAnswers);
 };
 
+export const askQuestion = (q) => readlineSync.question(`Question: ${q}\nYour answer: `);
+
 export const getRandomPositive = (max) => Math.round(Math.random() * (max - 1)) + 1;

@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
 import {
   greetings,
   askName,
   answerChecker,
   quizPlayer,
+  askQuestion,
   getRandomPositive,
 } from '../index.js';
 
@@ -13,7 +13,7 @@ import {
 const askEvenNumber = () => {
   const number = getRandomPositive(100);
   const isEven = number % 2 === 0;
-  const answer = readlineSync.question(`Question: ${number}\nYour answer: `);
+  const answer = askQuestion(number);
   const correctAnswer = isEven ? 'yes' : 'no';
   return answerChecker(answer, correctAnswer);
 };

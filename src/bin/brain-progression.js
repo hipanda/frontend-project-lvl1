@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
 import {
   greetings,
   askName,
   answerChecker,
   quizPlayer,
+  askQuestion,
   getRandomPositive,
 } from '../index.js';
 
@@ -30,7 +30,7 @@ const askProgressionNumber = () => {
   const progressionStr = printProgression(start, inc, progLength, hiddenElemIndex);
 
   const correctAnswer = String(hiddenElem);
-  const answer = readlineSync.question(`Question: ${progressionStr}\nYour answer: `);
+  const answer = askQuestion(progressionStr);
   return answerChecker(answer, correctAnswer);
 };
 

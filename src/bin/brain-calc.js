@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
 import {
   greetings,
   askName,
   answerChecker,
   quizPlayer,
+  askQuestion,
   getRandomPositive,
 } from '../index.js';
 
@@ -34,7 +34,7 @@ const askCalc = () => {
   const opFunc = operatorFunc(op);
 
   const correctAnswer = String(opFunc(num1, num2));
-  const answer = readlineSync.question(`Question: ${num1} ${op} ${num2}\nYour answer: `);
+  const answer = askQuestion(`${num1} ${op} ${num2}`);
   return answerChecker(answer, correctAnswer);
 };
 

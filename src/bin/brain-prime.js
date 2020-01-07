@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
 import {
   greetings,
   askName,
   answerChecker,
   quizPlayer,
+  askQuestion,
   getRandomPositive,
 } from '../index.js';
 
@@ -33,7 +33,7 @@ const askPrimeNumber = () => {
   const number = getRandomPositive(100) + 1; // starting from 2
 
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
-  const answer = readlineSync.question(`Question: ${number}\nYour answer: `);
+  const answer = askQuestion(number);
   return answerChecker(answer, correctAnswer);
 };
 

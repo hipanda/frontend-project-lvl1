@@ -15,3 +15,6 @@
 
 ## Guess a number in progression
 [![asciicast](https://asciinema.org/a/S1HBCOwcvIwqdmdH0tN1epgS2.png)](https://asciinema.org/a/S1HBCOwcvIwqdmdH0tN1epgS2)
+
+## Guess if the number is prime
+[![asciicast](https://asciinema.org/a/dc1PYJusJc9yO6Umljh1b9bdS.png)](https://asciinema.org/a/dc1PYJusJc9yO6Umljh1b9bdS)

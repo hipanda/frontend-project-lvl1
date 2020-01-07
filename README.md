@@ -12,3 +12,6 @@
 
 ## Find greatest common divisior
 [![asciicast](https://asciinema.org/a/3UIEjvCI9R69cVe8IGuSU6VZb.png)](https://asciinema.org/a/3UIEjvCI9R69cVe8IGuSU6VZb)
+
+## Guess a number in progression
+[![asciicast](https://asciinema.org/a/S1HBCOwcvIwqdmdH0tN1epgS2.png)](https://asciinema.org/a/S1HBCOwcvIwqdmdH0tN1epgS2)

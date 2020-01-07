@@ -3,20 +3,9 @@
 import {
   greetings,
   askName,
-  answerChecker,
   quizPlayer,
-  askQuestion,
-  getRandomPositive,
 } from '../index.js';
-
-// task for even-game
-const askEvenNumber = () => {
-  const number = getRandomPositive(100);
-  const isEven = number % 2 === 0;
-  const answer = askQuestion(number);
-  const correctAnswer = isEven ? 'yes' : 'no';
-  return answerChecker(answer, correctAnswer);
-};
+import askEvenNumber from '../games/even.js';
 
 // game starts
 greetings('Answer "yes" if the number is even, otherwise answer "no".\n');

@@ -26,9 +26,6 @@ const quizPlayer = (playerName, taskFunc, correctAnswersNum = 0) => {
   return quizPlayer(playerName, taskFunc, correctAnswersNum);
 };
 
-// to move to /uitls/
-export const getRandomPositive = (max) => Math.round(Math.random() * (max - 1)) + 1;
-
 // playGame
 export default (game, rules) => {
   // greetigns

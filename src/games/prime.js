@@ -1,6 +1,6 @@
 
-import { getRandomPositive } from '../index.js';
 import { task } from '../utils/task.js';
+import random from '../utils/random.js';
 
 export const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
 const maxNum = 100;
@@ -26,7 +26,7 @@ const isPrime = (num) => {
 };
 
 export default () => {
-  const number = getRandomPositive(maxNum) + 1; // starting from 2
+  const number = random(2, maxNum);
 
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return task(number, correctAnswer);

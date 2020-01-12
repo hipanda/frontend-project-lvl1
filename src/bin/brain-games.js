@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-import { greetings, askName } from '../index.js';
+import readlineSync from 'readline-sync';
 
-greetings();
-askName();
+console.log('\nWelcome to the Brain Games!');
+const name = readlineSync.question('What\'s is your name? ');
+console.log(`Hello, ${name}!\n`);

@@ -1,10 +1,8 @@
 
-import {
-  getRandomPositive,
-  askQuestion,
-  answerChecker,
-} from '../index.js';
+import { getRandomPositive } from '../index.js';
+import { task } from '../utils/task.js';
 
+export const rules = 'Find the greatest common divisor of given numbers.\n';
 const maxNum = 100;
 
 const gcd = (num1, num2) => {
@@ -24,6 +22,5 @@ export default () => {
   const num2 = getRandomPositive(maxNum);
 
   const correctAnswer = String(gcd(num1, num2));
-  const answer = askQuestion(`${num1} ${num2}`);
-  return answerChecker(answer, correctAnswer);
+  return task(`${num1} ${num2}`, correctAnswer);
 };

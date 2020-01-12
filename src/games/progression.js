@@ -1,10 +1,8 @@
 
-import {
-  getRandomPositive,
-  askQuestion,
-  answerChecker,
-} from '../index.js';
+import { getRandomPositive } from '../index.js';
+import { task } from '../utils/task.js';
 
+export const rules = 'What number is missing in the progression?\n';
 const maxStartNum = 50;
 const maxIncrementor = 10;
 const progressionLength = 10;
@@ -21,7 +19,6 @@ const printProgression = (start, inc, length, hidden) => {
   return str;
 };
 
-// askProgressionNumber
 export default () => {
   const start = getRandomPositive(maxStartNum);
   const inc = getRandomPositive(maxIncrementor);
@@ -31,6 +28,5 @@ export default () => {
   const progressionStr = printProgression(start, inc, progLength, hiddenElemIndex);
 
   const correctAnswer = String(hiddenElem);
-  const answer = askQuestion(progressionStr);
-  return answerChecker(answer, correctAnswer);
+  return task(progressionStr, correctAnswer);
 };

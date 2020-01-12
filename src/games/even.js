@@ -1,17 +1,14 @@
 
-import {
-  getRandomPositive,
-  askQuestion,
-  answerChecker,
-} from '../index.js';
+import { getRandomPositive } from '../index.js';
+import { task } from '../utils/task.js';
 
+export const rules = 'Answer "yes" if the number is even, otherwise answer "no".\n';
 const maxNum = 100;
 
-// askEvenNumber
 export default () => {
   const number = getRandomPositive(maxNum);
   const isEven = number % 2 === 0;
-  const answer = askQuestion(number);
+
   const correctAnswer = isEven ? 'yes' : 'no';
-  return answerChecker(answer, correctAnswer);
+  return task(number, correctAnswer);
 };

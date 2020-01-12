@@ -1,10 +1,8 @@
 
-import {
-  getRandomPositive,
-  askQuestion,
-  answerChecker,
-} from '../index.js';
+import { getRandomPositive } from '../index.js';
+import { task } from '../utils/task.js';
 
+export const rules = 'What is the result of the expression?\n';
 const operators = ['+', '-', '*'];
 const maxNum = 10;
 
@@ -23,7 +21,6 @@ const operatorFunc = (op) => {
   return null;
 };
 
-// askCalc
 export default () => {
   const num1 = getRandomPositive(maxNum);
   const num2 = getRandomPositive(maxNum);
@@ -32,6 +29,5 @@ export default () => {
   const opFunc = operatorFunc(op);
 
   const correctAnswer = String(opFunc(num1, num2));
-  const answer = askQuestion(`${num1} ${op} ${num2}`);
-  return answerChecker(answer, correctAnswer);
+  return task(`${num1} ${op} ${num2}`, correctAnswer);
 };

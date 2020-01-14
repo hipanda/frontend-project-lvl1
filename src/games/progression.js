@@ -1,4 +1,5 @@
 
+import playGame from '../index';
 import { task } from '../utils/task';
 import random from '../utils/random';
 
@@ -19,7 +20,7 @@ const printProgression = (start, inc, length, hidden) => {
   return str;
 };
 
-export default () => {
+const progression = () => {
   const start = random(1, maxStartNum);
   const inc = random(2, maxIncrementor);
   const progLength = progressionLength;
@@ -29,4 +30,8 @@ export default () => {
 
   const correctAnswer = String(hiddenElem);
   return task(progressionStr, correctAnswer);
+};
+
+export default () => {
+  playGame(progression, rules);
 };

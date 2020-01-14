@@ -1,4 +1,5 @@
 
+import playGame from '../index';
 import { task } from '../utils/task';
 import random from '../utils/random';
 
@@ -17,10 +18,14 @@ const gcd = (num1, num2) => {
 };
 
 // askGCD
-export default () => {
+const even = () => {
   const num1 = random(1, maxNum);
   const num2 = random(1, maxNum);
 
   const correctAnswer = String(gcd(num1, num2));
   return task(`${num1} ${num2}`, correctAnswer);
+};
+
+export default () => {
+  playGame(even, rules);
 };

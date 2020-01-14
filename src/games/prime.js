@@ -1,4 +1,5 @@
 
+import playGame from '../index';
 import { task } from '../utils/task';
 import random from '../utils/random';
 
@@ -25,9 +26,13 @@ const isPrime = (num) => {
   return iter(Math.floor(num / 2));
 };
 
-export default () => {
+const prime = () => {
   const number = random(2, maxNum);
 
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return task(number, correctAnswer);
+};
+
+export default () => {
+  playGame(prime, rules);
 };

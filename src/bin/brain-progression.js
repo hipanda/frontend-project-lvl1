@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import playGame from '../index';
-import progression, { rules } from '../games/progression';
+import playProgression from '../games/progression';
 
-playGame(progression, rules);
+playProgression();

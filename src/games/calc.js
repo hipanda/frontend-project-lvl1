@@ -1,4 +1,5 @@
 
+import playGame from '../index';
 import { task } from '../utils/task';
 import random from '../utils/random';
 
@@ -21,7 +22,7 @@ const operatorFunc = (op) => {
   return null;
 };
 
-export default () => {
+const calc = () => {
   const num1 = random(1, maxNum);
   const num2 = random(1, maxNum);
   const opNum = Math.round(Math.random() * (operators.length - 1));
@@ -30,4 +31,8 @@ export default () => {
 
   const correctAnswer = String(opFunc(num1, num2));
   return task(`${num1} ${op} ${num2}`, correctAnswer);
+};
+
+export default () => {
+  playGame(calc, rules);
 };

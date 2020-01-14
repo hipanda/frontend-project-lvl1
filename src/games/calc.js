@@ -6,7 +6,7 @@ import random from '../utils/random';
 export const rules = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 
-const operatorFunc = (op) => {
+const operationProc = (op) => {
   switch (op) {
     case '+':
       return (x, y) => x + y;
@@ -15,21 +15,20 @@ const operatorFunc = (op) => {
     case '*':
       return (x, y) => x * y;
     default:
-      console.log('nothing happens');
+      console.log('unknow operator');
+      return null;
   }
-
-  return null;
 };
 
 const calc = () => {
   const num1 = random(1, 10);
   const num2 = random(1, 10);
-  const opNum = Math.round(Math.random() * (operators.length - 1));
-  const op = operators[opNum];
-  const opFunc = operatorFunc(op);
+  const operatorIndex = random(0, operators.length - 1);
+  const operator = operators[operatorIndex];
+  const operatorFunction = operationProc(operator);
 
-  const correctAnswer = String(opFunc(num1, num2));
-  return task(`${num1} ${op} ${num2}`, correctAnswer);
+  const correctAnswer = String(operatorFunction(num1, num2));
+  return task(`${num1} ${operator} ${num2}`, correctAnswer);
 };
 
 export default () => {

@@ -4,7 +4,6 @@ import { task } from '../utils/task';
 import random from '../utils/random';
 
 export const rules = 'What number is missing in the progression?';
-const maxStartNum = 50;
 const maxIncrementor = 10;
 const progressionLength = 10;
 
@@ -21,12 +20,11 @@ const printProgression = (start, inc, length, hidden) => {
 };
 
 const progression = () => {
-  const start = random(1, maxStartNum);
+  const start = random(1, 50);
   const inc = random(2, maxIncrementor);
-  const progLength = progressionLength;
-  const hiddenElemIndex = random(0, progLength - 1);
+  const hiddenElemIndex = random(0, progressionLength - 1);
   const hiddenElem = start + hiddenElemIndex * inc;
-  const progressionStr = printProgression(start, inc, progLength, hiddenElemIndex);
+  const progressionStr = printProgression(start, inc, progressionLength, hiddenElemIndex);
 
   const correctAnswer = String(hiddenElem);
   return task(progressionStr, correctAnswer);

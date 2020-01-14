@@ -4,7 +4,6 @@ import { task } from '../utils/task';
 import random from '../utils/random';
 
 export const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const maxNum = 100;
 
 const isPrime = (num) => {
   if (num > 2 && num % 2 === 0) {
@@ -27,7 +26,7 @@ const isPrime = (num) => {
 };
 
 const prime = () => {
-  const number = random(2, maxNum);
+  const number = random(2, 100);
 
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return task(number, correctAnswer);

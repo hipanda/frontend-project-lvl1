@@ -5,7 +5,6 @@ import random from '../utils/random';
 
 export const rules = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
-const maxNum = 10;
 
 const operatorFunc = (op) => {
   switch (op) {
@@ -23,8 +22,8 @@ const operatorFunc = (op) => {
 };
 
 const calc = () => {
-  const num1 = random(1, maxNum);
-  const num2 = random(1, maxNum);
+  const num1 = random(1, 10);
+  const num2 = random(1, 10);
   const opNum = Math.round(Math.random() * (operators.length - 1));
   const op = operators[opNum];
   const opFunc = operatorFunc(op);

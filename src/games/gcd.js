@@ -4,7 +4,6 @@ import { task } from '../utils/task';
 import random from '../utils/random';
 
 export const rules = 'Find the greatest common divisor of given numbers.';
-const maxNum = 100;
 
 const gcd = (num1, num2) => {
   const larger = num1 > num2 ? num1 : num2;
@@ -19,8 +18,8 @@ const gcd = (num1, num2) => {
 
 // askGCD
 const even = () => {
-  const num1 = random(1, maxNum);
-  const num2 = random(1, maxNum);
+  const num1 = random(1, 100);
+  const num2 = random(1, 100);
 
   const correctAnswer = String(gcd(num1, num2));
   return task(`${num1} ${num2}`, correctAnswer);

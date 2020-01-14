@@ -7,7 +7,7 @@ export const rules = 'What number is missing in the progression?';
 const maxIncrementor = 10;
 const progressionLength = 10;
 
-const printProgression = (start, inc, length, hidden) => {
+const genProgression = (start, inc, length, hidden) => {
   let str = '';
   for (let i = 0; i < length; i += 1) {
     if (i === hidden) {
@@ -21,13 +21,13 @@ const printProgression = (start, inc, length, hidden) => {
 
 const progression = () => {
   const start = random(1, 50);
-  const inc = random(2, maxIncrementor);
-  const hiddenElemIndex = random(0, progressionLength - 1);
-  const hiddenElem = start + hiddenElemIndex * inc;
-  const progressionStr = printProgression(start, inc, progressionLength, hiddenElemIndex);
+  const step = random(2, maxIncrementor);
+  const hiddenItemIndex = random(0, progressionLength - 1);
+  const hiddenItem = start + hiddenItemIndex * step;
+  const progressionWithHiddenItem = genProgression(start, step, progressionLength, hiddenItemIndex);
 
-  const correctAnswer = String(hiddenElem);
-  return task(progressionStr, correctAnswer);
+  const correctAnswer = String(hiddenItem);
+  return task(progressionWithHiddenItem, correctAnswer);
 };
 
 export default () => {

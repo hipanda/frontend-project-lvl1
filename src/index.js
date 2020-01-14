@@ -23,7 +23,7 @@ const quizPlayer = (playerName, taskFunc, correctAnswersNum = 0) => {
 
   console.log(`"${playerAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
   console.log(`Let's try again, ${playerName}!\n`);
-  return quizPlayer(playerName, taskFunc, correctAnswersNum);
+  return false;
 };
 
 // playGame

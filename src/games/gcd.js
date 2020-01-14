@@ -1,6 +1,6 @@
 
-import { task } from '../utils/task.js';
-import random from '../utils/random.js';
+import { task } from '../utils/task';
+import random from '../utils/random';
 
 export const rules = 'Find the greatest common divisor of given numbers.\n';
 const maxNum = 100;

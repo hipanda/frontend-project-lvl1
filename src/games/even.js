@@ -1,6 +1,6 @@
 
-import { task } from '../utils/task.js';
-import random from '../utils/random.js';
+import { task } from '../utils/task';
+import random from '../utils/random';
 
 export const rules = 'Answer "yes" if the number is even, otherwise answer "no".\n';
 const maxNum = 100;

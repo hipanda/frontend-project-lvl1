@@ -1,6 +1,6 @@
 
-import { task } from '../utils/task.js';
-import random from '../utils/random.js';
+import { task } from '../utils/task';
+import random from '../utils/random';
 
 export const rules = 'What number is missing in the progression?\n';
 const maxStartNum = 50;

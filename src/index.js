@@ -1,6 +1,6 @@
 
 import readlineSync from 'readline-sync';
-import { getQuest, getKey } from './utils/task.js';
+import { getQuest, getKey } from './utils/task';
 
 // number of correct answers to win. common for all games
 const answersToWin = 3;

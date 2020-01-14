@@ -1,6 +1,6 @@
 
-import { task } from '../utils/task.js';
-import random from '../utils/random.js';
+import { task } from '../utils/task';
+import random from '../utils/random';
 
 export const rules = 'What is the result of the expression?\n';
 const operators = ['+', '-', '*'];

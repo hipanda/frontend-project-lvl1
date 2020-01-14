@@ -3,7 +3,7 @@ import playGame from '../index';
 import { task } from '../utils/task';
 import random from '../utils/random';
 
-export const rules = 'What number is missing in the progression?\n';
+export const rules = 'What number is missing in the progression?';
 const maxStartNum = 50;
 const maxIncrementor = 10;
 const progressionLength = 10;

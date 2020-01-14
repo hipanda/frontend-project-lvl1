@@ -3,7 +3,7 @@ import playGame from '../index';
 import { task } from '../utils/task';
 import random from '../utils/random';
 
-export const rules = 'Find the greatest common divisor of given numbers.\n';
+export const rules = 'Find the greatest common divisor of given numbers.';
 const maxNum = 100;
 
 const gcd = (num1, num2) => {

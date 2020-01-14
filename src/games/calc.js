@@ -3,7 +3,7 @@ import playGame from '../index';
 import { task } from '../utils/task';
 import random from '../utils/random';
 
-export const rules = 'What is the result of the expression?\n';
+export const rules = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 const maxNum = 10;
 

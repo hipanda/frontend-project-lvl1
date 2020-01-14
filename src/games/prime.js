@@ -3,7 +3,7 @@ import playGame from '../index';
 import { task } from '../utils/task';
 import random from '../utils/random';
 
-export const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
+export const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const maxNum = 100;
 
 const isPrime = (num) => {

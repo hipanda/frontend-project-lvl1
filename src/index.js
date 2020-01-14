@@ -30,10 +30,10 @@ const quizPlayer = (playerName, taskFunc, correctAnswersNum = 0) => {
 export default (game, rules) => {
   // greetigns
   console.log('\nWelcome to the Brain Games!');
-  console.log(rules);
   // ask name
-  const name = readlineSync.question('What\'s is your name? ');
+  const name = readlineSync.question('What\'s your name? ');
   console.log(`Hello, ${name}!\n`);
 
+  console.log(`${rules}\n`);
   quizPlayer(name, game);
 };

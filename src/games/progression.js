@@ -8,15 +8,17 @@ const maxStep = 10;
 const progressionLength = 10;
 
 const genProgression = (start, inc, length, hidden) => {
-  let str = '';
+  const progression = [];
   for (let i = 0; i < length; i += 1) {
     if (i === hidden) {
-      str = `${str}.. `;
+      progression[i] = '..';
     } else {
-      str = `${str}${start + inc * i} `;
+      progression[i] = start + inc * i;
     }
   }
-  return str;
+
+  const finalProgression = progression.join(' ');
+  return finalProgression;
 };
 
 const getProgressionTask = () => {

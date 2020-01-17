@@ -1,4 +1,4 @@
 
-export const task = (quest, key) => [quest, key];
-export const getQuest = ([quest]) => quest;
-export const getKey = ([, key]) => key;
+export const makeTask = (question, answer) => [question, answer];
+export const getQuestion = ([question]) => question;
+export const getAnswer = ([, answer]) => answer;

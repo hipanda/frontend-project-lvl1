@@ -1,19 +1,20 @@
 
 import playGame from '../index';
-import { task } from '../utils/task';
+import { makeTask } from '../utils/task';
 import random from '../utils/random';
 
-export const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+export const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (num) => num % 2 === 0;
 
-const even = () => {
+const getEvenTask = () => {
   const number = random(1, 100);
 
+  const question = String(number);
   const correctAnswer = isEven(number) ? 'yes' : 'no';
-  return task(number, correctAnswer);
+  return makeTask(question, correctAnswer);
 };
 
 export default () => {
-  playGame(even, rules);
+  playGame(getEvenTask, description);
 };

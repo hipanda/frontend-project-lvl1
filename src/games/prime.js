@@ -1,9 +1,9 @@
 
 import playGame from '../index';
-import { task } from '../utils/task';
+import { makeTask } from '../utils/task';
 import random from '../utils/random';
 
-export const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+export const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   if (num > 2 && num % 2 === 0) {
@@ -25,13 +25,14 @@ const isPrime = (num) => {
   return iter(Math.floor(num / 2));
 };
 
-const prime = () => {
+const getPrimeTask = () => {
   const number = random(2, 100);
 
+  const question = String(number);
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
-  return task(number, correctAnswer);
+  return makeTask(question, correctAnswer);
 };
 
 export default () => {
-  playGame(prime, rules);
+  playGame(getPrimeTask, description);
 };

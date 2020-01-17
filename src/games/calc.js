@@ -1,36 +1,35 @@
 
 import playGame from '../index';
-import { task } from '../utils/task';
+import { makeTask } from '../utils/task';
 import random from '../utils/random';
 
-export const rules = 'What is the result of the expression?';
+export const description = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 
-const operationProc = (op) => {
-  switch (op) {
+const calculate = (operator, x, y) => {
+  switch (operator) {
     case '+':
-      return (x, y) => x + y;
+      return x + y;
     case '-':
-      return (x, y) => x - y;
+      return x - y;
     case '*':
-      return (x, y) => x * y;
+      return x * y;
     default:
-      console.log('unknow operator');
       return null;
   }
 };
 
-const calc = () => {
+const getCalcTask = () => {
   const num1 = random(1, 10);
   const num2 = random(1, 10);
   const operatorIndex = random(0, operators.length - 1);
   const operator = operators[operatorIndex];
-  const operatorFunction = operationProc(operator);
 
-  const correctAnswer = String(operatorFunction(num1, num2));
-  return task(`${num1} ${operator} ${num2}`, correctAnswer);
+  const question = `${num1} ${operator} ${num2}`;
+  const correctAnswer = String(calculate(operator, num1, num2));
+  return makeTask(question, correctAnswer);
 };
 
 export default () => {
-  playGame(calc, rules);
+  playGame(getCalcTask, description);
 };

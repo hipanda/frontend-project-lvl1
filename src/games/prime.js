@@ -6,6 +6,7 @@ import random from '../utils/random';
 export const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
+  // Any even number above 2 is not prime
   if (num > 2 && num % 2 === 0) {
     return false;
   }

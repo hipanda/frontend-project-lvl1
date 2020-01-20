@@ -17,8 +17,7 @@ const genProgression = (start, inc, length, hidden) => {
     }
   }
 
-  const finalProgression = progression.join(' ');
-  return finalProgression;
+  return progression.join(' ');
 };
 
 const getProgressionTask = () => {

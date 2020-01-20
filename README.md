@@ -4,16 +4,16 @@
 [![Build Status](https://travis-ci.com/hipanda/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/hipanda/frontend-project-lvl1)
 
 ## Even numbers guessing
-[![asciicast](https://asciinema.org/a/0XcGvH46BuHkeBHXHOy9XvJ94.png)](https://asciinema.org/a/0XcGvH46BuHkeBHXHOy9XvJ94)
+[![asciicast](https://asciinema.org/a/IVhKYM57YB4tjoGjw2mGJql0v.png)](https://asciinema.org/a/IVhKYM57YB4tjoGjw2mGJql0v)
 
 ## Caclulator
-[![asciicast](https://asciinema.org/a/1cCtGTK9IwC3luhqQlA6JWaZs.png)](https://asciinema.org/a/1cCtGTK9IwC3luhqQlA6JWaZs)
+[![asciicast](https://asciinema.org/a/BCOX41lV0TorYnqeoyoYIlW5A.png)](https://asciinema.org/a/BCOX41lV0TorYnqeoyoYIlW5A)
 
 ## Find greatest common divisior
-[![asciicast](https://asciinema.org/a/3UIEjvCI9R69cVe8IGuSU6VZb.png)](https://asciinema.org/a/3UIEjvCI9R69cVe8IGuSU6VZb)
+[![asciicast](https://asciinema.org/a/Hnl6QImRRrLPzTQfSvBRkwvxq.png)](https://asciinema.org/a/Hnl6QImRRrLPzTQfSvBRkwvxq)
 
 ## Guess a number in progression
-[![asciicast](https://asciinema.org/a/S1HBCOwcvIwqdmdH0tN1epgS2.png)](https://asciinema.org/a/S1HBCOwcvIwqdmdH0tN1epgS2)
+[![asciicast](https://asciinema.org/a/ahyU8je2B30617z5WMJSaJtWo.png)](https://asciinema.org/a/ahyU8je2B30617z5WMJSaJtWo)
 
 ## Guess if the number is prime
-[![asciicast](https://asciinema.org/a/dc1PYJusJc9yO6Umljh1b9bdS.png)](https://asciinema.org/a/dc1PYJusJc9yO6Umljh1b9bdS)
+[![asciicast](https://asciinema.org/a/o3OpjtlxU0u9G849xb48SVeM6.png)](https://asciinema.org/a/o3OpjtlxU0u9G849xb48SVeM6)

@@ -6,8 +6,8 @@ import random from '../utils/random';
 export const description = 'Find the greatest common divisor of given numbers.';
 
 const gcd = (num1, num2) => {
-  const larger = num1 > num2 ? num1 : num2;
-  const smaller = num1 > num2 ? num2 : num1;
+  const larger = Math.max(num1, num2);
+  const smaller = Math.min(num1, num2);
 
   if (larger % smaller === 0) {
     return smaller;

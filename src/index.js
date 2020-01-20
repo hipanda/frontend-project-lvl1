@@ -15,23 +15,20 @@ export default (getGameTask, description) => {
 
   console.log(`${description}\n`);
 
-  let correctAnswersNum = 0;
-  while (correctAnswersNum < answersToWin) {
+  for (let i = 0; i < answersToWin; i += 1) {
     const task = getGameTask();
     const correctAnswer = getAnswer(task);
     const playerAnswer = readlineSync.question(`Question: ${getQuestion(task)}\nYour answer: `);
-
     const isCorrect = correctAnswer === playerAnswer;
 
     if (isCorrect) {
-      correctAnswersNum += 1;
       console.log('Correct!\n');
     } else {
       console.log(`"${playerAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
       console.log(`Let's try again, ${name}!\n`);
-      return false;
+      return;
     }
   }
 
-  return console.log(`Congratulations, ${name}!\n`);
+  console.log(`Congratulations, ${name}!\n`);
 };

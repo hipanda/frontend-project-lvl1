@@ -6,18 +6,15 @@ import random from '../utils/random';
 export const description = 'Find the greatest common divisor of given numbers.';
 
 const gcd = (num1, num2) => {
-  const larger = Math.max(num1, num2);
-  const smaller = Math.min(num1, num2);
-
-  if (larger % smaller === 0) {
-    return smaller;
+  if (num2 === 0) {
+    return num1;
   }
 
-  return gcd(smaller, larger % smaller);
+  return gcd(num2, num1 % num2);
 };
 
 // askGCD
-const getEvenTask = () => {
+const getGCDTask = () => {
   const num1 = random(1, 100);
   const num2 = random(1, 100);
 
@@ -27,5 +24,5 @@ const getEvenTask = () => {
 };
 
 export default () => {
-  playGame(getEvenTask, description);
+  playGame(getGCDTask, description);
 };
